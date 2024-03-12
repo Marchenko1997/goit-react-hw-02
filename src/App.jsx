@@ -65,7 +65,7 @@ export default function App() {
         <Feedback
           feedbackTypes={feedbackTypes}
           totalFeedback={totalFeedback}
-          positivePercentage={positivePercentage}
+          positivePercentage={positivePercentage} 
         />
       ) : (
         feedbackMessageShown && <Notification message="No feedback given yet." />

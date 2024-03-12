@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Feedback = ({ feedbackTypes, totalFeedback }) => {
-  const positivePercentage = totalFeedback === 0 ? 0 : Math.round((feedbackTypes.positive / totalFeedback) * 100);
-
+const Feedback = ({ feedbackTypes, totalFeedback, positivePercentage }) => {
   return (
     <div>
       <h2>Feedback</h2>
@@ -23,6 +21,7 @@ Feedback.propTypes = {
     positive: PropTypes.number.isRequired,
   }).isRequired,
   totalFeedback: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired, 
 };
 
 export default Feedback;
